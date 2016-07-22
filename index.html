@@ -6,12 +6,16 @@
   <link rel="stylesheet" href="./bs/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="./bs/js/bootstrap.min.js"></script>
+  <script src="./bs-tabcollaps.js"></script>
+  <script>
+  	$('#gentabs').tabCollapse();
+  </script>
 </head>
 <body>
 
 <div class="container">
   <h2>Random Generators</h2>
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs" id="gentabs">
     <li class="active"><a data-toggle="tab" href="#mission">Missions</a></li>
     <li><a data-toggle="tab" href="#trouble">Trouble</a></li>
     <li><a data-toggle="tab" href="#encounter">Encounter</a></li>
