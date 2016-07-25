@@ -3,45 +3,51 @@
   <title>R.chi.3</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./bs/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bs/css/bootstrap.min.css"></link>
+  <link rel="stylesheet" href="./util/resp-tab.css"></link>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="./bs/js/bootstrap.min.js"></script>
+  <script src="./util/resp-tab.js"></script>
 </head>
 <body>
 
-<div class="container">
-  <h2>Random Generators</h2>
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#mission">Missions</a></li>
-    <li><a data-toggle="tab" href="#trouble">Trouble</a></li>
-    <li><a data-toggle="tab" href="#encounter">Encounter</a></li>
-    <li><a data-toggle="tab" href="#itwbe">If Things Weren't Bad Enough</a></li>
-  </ul>
+<div class='container'>
+	<div class='row'>
+		<div class='col-xs-12'>
+			<br>
+			<br>
+				<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+				<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+				<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+				<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+			</ul>
 
-  <div class="tab-content">
-    <div id="mission" class="tab-pane fade in active">
-		<h3>Mission</h3>
-		<div class="panel panel-default">
-		<div class="panel-heading">Controls</div>
-		<div class="panel-body">Panel Content</div>
-		<div class="panel panel-default">
-		<div class="panel-heading">Results</div>
-		<div class="panel-body">Panel Content</div>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane fade in active" id="home">Home Content
+				
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+								</h4>
+							</div>
+							<div id="collapse1" class="panel-collapse collapse">
+								<div class="panel-body">Panel Body</div>
+								<div class="panel-footer">Panel Footer</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div role="tabpanel" class="tab-pane" id="profile">Profile Content</div>
+				<div role="tabpanel" class="tab-pane" id="messages">Messages Content</div>
+				<div role="tabpanel" class="tab-pane" id="settings">Settings Content</div>
+			</div>
+
+		</div>
 	</div>
-    </div>
-    <div id="trouble" class="tab-pane fade">
-		<h3>Trouble</h3>
-		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div id="encounter" class="tab-pane fade">
-		<h3>Encounter</h3>
-		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div>
-    <div id="itwbe" class="tab-pane fade">
-		<h3>If Things Weren't Bad Enough</h3>
-		<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-  </div>
 </div>
 
 </body>
