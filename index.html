@@ -6,12 +6,13 @@
   <link rel="stylesheet" href="./bs/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="./bs/js/bootstrap.min.js"></script>
+  <script src="./bs-tabcollaps.js"></script>
 </head>
 <body>
 
 <div class="container">
   <h2>Random Generators</h2>
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs" id="gentabs">
     <li class="active"><a data-toggle="tab" href="#mission">Missions</a></li>
     <li><a data-toggle="tab" href="#trouble">Trouble</a></li>
     <li><a data-toggle="tab" href="#encounter">Encounter</a></li>
@@ -22,12 +23,13 @@
     <div id="mission" class="tab-pane fade in active">
 		<h3>Mission</h3>
 		<div class="panel panel-default">
-		<div class="panel-heading">Controls</div>
-		<div class="panel-body">Panel Content</div>
+			<div class="panel-heading">Controls</div>
+			<div class="panel-body">Panel Content</div>
+		</div>
 		<div class="panel panel-default">
-		<div class="panel-heading">Results</div>
-		<div class="panel-body">Panel Content</div>
-	</div>
+			<div class="panel-heading">Results</div>
+			<div class="panel-body">Panel Content</div>
+		</div>
     </div>
     <div id="trouble" class="tab-pane fade">
 		<h3>Trouble</h3>
@@ -43,6 +45,11 @@
     </div>
   </div>
 </div>
+
+<!-- Responsive tabs -->
+<script>
+  $('#gentabs').tabCollapse();
+</script>
 
 </body>
 </html>
