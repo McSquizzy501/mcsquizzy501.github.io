@@ -1,7 +1,7 @@
 (function() {
-  var app = angular.module('SRGM', []);
+  var app = angular.module('SRGM', ['main-tab-controller','navbar-controller']);
 
-  app.controller('NavBarController', function() {
+  /*app.controller('NavBarController', function() {
     this.navToggle = true;
     this.dropDown1 = true;
     this.dropDown2 = true;
@@ -28,7 +28,7 @@
       return this.tab == checkTab;
     };
 
-  });
+  });*/
 
   app.directive('riftGeneration', function() {
     return {
