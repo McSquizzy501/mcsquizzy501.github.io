@@ -14,6 +14,6 @@
     
   });
   
-  var result = $.parseJSON('json/rift-category.json')
+  var result = $.parseJSON('./json/rift-category.json')
   
 })();
