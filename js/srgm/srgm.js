@@ -30,11 +30,4 @@
 
   });*/
 
-  app.directive('riftGeneration', function() {
-    return {
-      restrict: 'E',
-      templateUlr: "../../html/rift-generation.html"
-    };
-  });
-
 })();
