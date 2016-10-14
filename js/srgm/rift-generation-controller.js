@@ -10,7 +10,7 @@
 	});
 
 	// Directives
-	app.directive('riftGeneration', function() {
+	app.directive("riftGeneration", function() {
 		return {
 			restrict: 'E',
 			template: "<h1>rift generation</h1>";
