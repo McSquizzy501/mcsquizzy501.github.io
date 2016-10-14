@@ -1,24 +1,18 @@
 (function(){
   var app = angular.module('rift-generation-module',[]);
   
-  app.controller('riftGenerationController',function(){
+	app.controller('riftGenerationController',function(){
 		//this.results = result;
 		this.text = "";
-	
-		
+		this.generateResults = function(numResults){};
+		this.generateResult = function(){};	
 	});
-    
-    this.generateResults = function(numResults){};
-    this.generateResult = function(){};
-    
-  });
-	
+
 	var myText = '';
 	
-  $.get('/js/srgm/json/rift-category.json', function(data) {
-	  $.each(data, function(k, v){
-		myText = myText + k +' = ' + v + '<br>';
-	  });
-  });
-  
+	$.get('/js/srgm/json/rift-category.json', function(data) {
+		$.each(data, function(k, v){
+			myText = myText + k +' = ' + v + '<br>';
+		});
+	});
 })();
