@@ -11,6 +11,7 @@
 	var myText = [];
 	
 	$.get('/js/srgm/json/rift-category.json', function(data) {
+		alert(data);
 		$.each(data, function(k, v){
 			myText.push(k +' = ' + v + '<br>');
 		});
