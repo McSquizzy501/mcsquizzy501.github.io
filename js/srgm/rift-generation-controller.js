@@ -14,6 +14,6 @@
     
   });
   
-  var result = $.parseJSON('./json/rift-category.json')
+  var result = $.parseJSON('{8: "random", 1: "periodic", 12: "permanent"}');
   
 })();
