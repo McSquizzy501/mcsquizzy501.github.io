@@ -1,55 +1,100 @@
 <html>
-<head>
-  <title>R.chi.3</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./bs/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="./bs/js/bootstrap.min.js"></script>
-  <script src="./bs-tabcollaps.js"></script>
-</head>
-<body>
+	<head>
+		<link rl="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+		<link rl="stylesheet" href="./css/font-awesome/font-awesome.min.css">
+		<script src ="./js/jquery/jquery-3.1.1.min.js"></script>
+		<script src ="./js/bootstrap/bootstrap.min.js"></script>		
+		<script src ="./js/angular/angular.min.js"></script>
+		<script src = "./js/srgm/srgm.js"></script>
+	</head>
+	<body ng-app='SRGM'>
+	  <nav class="navbar navbar-default" ng-controller="NavBarController as navCtrl">
+		<div class="container">
 
-<div class="container">
-  <h2>Random Generators</h2>
-  <ul class="nav nav-tabs" id="gentabs">
-    <li class="active"><a data-toggle="tab" href="#mission">Missions</a></li>
-    <li><a data-toggle="tab" href="#trouble">Trouble</a></li>
-    <li><a data-toggle="tab" href="#encounter">Encounter</a></li>
-    <li><a data-toggle="tab" href="#itwbe">If Things Weren't Bad Enough</a></li>
-  </ul>
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" ng-click="navCtrl.navToggle = !navCtrl.navToggle" data-target="#bs-example-navbar-collapse-1" ria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+			<a class="navbar-brand" href="#">Brand</a>
+		  </div>
 
-  <div class="tab-content">
-    <div id="mission" class="tab-pane fade in active">
-		<h3>Mission</h3>
-		<div class="panel panel-default">
-			<div class="panel-heading">Controls</div>
-			<div class="panel-body">Panel Content</div>
+		  <div class="navbar-collapse" ng-class="{collapse: navCtrl.navToggle}" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+			  <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+			  <li><a href="#">Link</a></li>
+			  <li class="dropdown" ng-class="{open : navCtrl.dropDown1}" ng-click="navCtrl.dropDown1 = !navCtrl.dropDown1">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+				  <li><a href="#">Action</a></li>
+				  <li><a href="#">Another action</a></li>
+				  <li><a href="#">Something else here</a></li>
+				  <li role="separator" class="divider"></li>
+				  <li><a href="#">Separated link</a></li>
+				  <li role="separator" class="divider"></li>
+				  <li><a href="#">One more separated link</a></li>
+				</ul>
+			  </li>
+			</ul>
+			<form class="navbar-form navbar-left">
+			  <div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			  </div>
+			  <button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="#">Link</a></li>
+			  <li class="dropdown" ng-class="{open : navCtrl.dropDown2}" ng-click="navCtrl.dropDown2 = !navCtrl.dropDown2">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown2 <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+				  <li><a href="#">Action</a></li>
+				  <li><a href="#">Another action</a></li>
+				  <li><a href="#">Something else here</a></li>
+				  <li role="separator" class="divider"></li>
+				  <li><a href="#">Separated link</a></li>
+				</ul>
+			  </li>
+			</ul>
+		  </div>
+		  
 		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">Results</div>
-			<div class="panel-body">Panel Content</div>
-		</div>
-    </div>
-    <div id="trouble" class="tab-pane fade">
-		<h3>Trouble</h3>
-		<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div id="encounter" class="tab-pane fade">
-		<h3>Encounter</h3>
-		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div>
-    <div id="itwbe" class="tab-pane fade">
-		<h3>If Things Weren't Bad Enough</h3>
-		<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-  </div>
-</div>
+		
+	  </nav>
 
-<!-- Responsive tabs -->
-<script>
-  $('#gentabs').tabCollapse();
-</script>
+	  <div class="container">
 
-</body>
+		<section ng-controller="TabController as tabCtrl">
+		  <ul class="nav nav-pills nav-justified">
+			<li ng-class="{active : tabCtrl.isActive(1)}">
+			  <a href ng-click="tabCtrl.setTab(1)">Rift Generator</a>
+			</li>
+			<li ng-class="{active : tabCtrl.isActive(2)}">
+			  <a href ng-click="tabCtrl.setTab(2)">Authority Figure</a>
+			</li>
+			<li ng-class="{active : tabCtrl.isActive(3)}">
+			  <a href ng-click="tabCtrl.setTab(3)">Risks & Rewards</a>
+			</li>
+		  </ul>
+
+		  <div class="tab-content">
+			<div class="tab-pane" 
+				 ng-class="{active : tabCtrl.isActive(1)}">
+			  <rift-generation></rift-generation>
+			</div>
+			<div class="tab-pane"
+				 ng-class="{active : tabCtrl.isActive(2)}">
+			  This is pane 2
+			</div>
+			<div class="tab-pane"
+				 ng-class="{active : tabCtrl.isActive(3)}">
+			  This is pane 3
+			</div>
+		  </div>
+
+		</section>
+	  </div>
+
+	</body>
 </html>
