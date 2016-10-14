@@ -1,16 +1,18 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<link rl="stylesheet" type="text/css" href="/css/bootstrap/bootstrap.min.css"></link>
-		<link rl="stylesheet" type="text/css" href="/css/font-awesome/font-awesome.min.css"></link>
-		<script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src ="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src ="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-		<script src = "./js/srgm/srgm.js"></script>
-	</head>
-	<body ng-app='SRGM'>
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href=https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app='SRGM'>
 	  <nav class="navbar navbar-default" ng-controller="NavBarController as navCtrl">
 		<div class="container">
-
 		  <div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" ng-click="navCtrl.navToggle = !navCtrl.navToggle" data-target="#bs-example-navbar-collapse-1" ria-expanded="false">
 			<span class="sr-only">Toggle navigation</span>
@@ -97,4 +99,5 @@
 	  </div>
 
 	</body>
+
 </html>
