@@ -18,6 +18,7 @@
   $.get('/js/srgm/json/rift-category.json', function(data) {
 	  $.each(data, function(k, v){
 		myText = myText + k +' = ' + v + '<br>';
+	  });
   });
   
 })();
