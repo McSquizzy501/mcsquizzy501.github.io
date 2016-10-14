@@ -2,10 +2,10 @@
   var app = angular.module('rift-generation-module',[]);
   
   app.controller('riftGenerationController',function(){
-    this.results = result;
-	this.text = "";
+		this.results = result;
+		this.text = "";
 	
-	$.each(results, function(k, v){
+		$.each(results, function(k, v){
 		text = text+k+' = ' + v + '<br>';
 	});
     
@@ -13,7 +13,9 @@
     this.generateResult = function(){};
     
   });
+	
+  var json = '{"A" : "x", "B" : "y", "C", "z"}';
   
-  var result = $.parseJSON('{a : "x", b : "y", c : "z"}');
+  var result = $.parseJSON(json);
   
 })();
