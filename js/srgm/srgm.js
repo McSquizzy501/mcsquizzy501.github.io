@@ -3,8 +3,8 @@
 
   app.controller('NavBarController', function() {
     this.navToggle = true;
-    this.dropDown1 = false;
-    this.dropDown2 = false;
+    this.dropDown1 = true;
+    this.dropDown2 = true;
   });
 
   app.controller('TabController', function() {
