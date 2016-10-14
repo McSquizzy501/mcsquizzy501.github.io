@@ -15,7 +15,7 @@
 	
 	var myText = '';
 	
-  $.getJSON('json/rift-category.json', function(data) {
+  $.get('json/rift-category.json', function(data) {
 	  $.each(data, function(k, v){
 		myText = myText + k +' = ' + v + '<br>';
   });
