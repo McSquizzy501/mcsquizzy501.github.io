@@ -2,11 +2,10 @@
   var app = angular.module('rift-generation-module',[]);
   
   app.controller('riftGenerationController',function(){
-		this.results = result;
+		//this.results = result;
 		this.text = "";
 	
-		$.each(results, function(k, v){
-		text = text+k+' = ' + v + '<br>';
+		
 	});
     
     this.generateResults = function(numResults){};
@@ -14,8 +13,11 @@
     
   });
 	
-  var json = '{"A" : "x", "B" : "y", "C", "z"}';
-  
-  var result = $.parseJSON(json);
+	var myText = '';
+	
+  $.getJSON('json/rift-category.json', function(data) {
+	  $.each(data, function(k, v){
+		myText = myText + k +' = ' + v + '<br>';
+  });
   
 })();
