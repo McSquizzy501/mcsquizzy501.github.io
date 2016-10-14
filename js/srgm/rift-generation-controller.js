@@ -1,5 +1,5 @@
 (function(){
-  var app = angular.module('rift-generation-module',[]);
+  var app = angular.module('rift-generation-controller',[]);
   
 	app.controller('riftGenerationController',function(){
 		//this.results = result;
