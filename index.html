@@ -27,7 +27,7 @@
 			<ul class="nav navbar-nav">
 			  <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
 			  <li><a href="#">Link</a></li>
-			  <li class="dropdown" ng-class="{open : navCtrl.dropDown1}" ng-click="navCtrl.dropDown1 = !navCtrl.dropDown1">
+			  <li class="dropdown" ng-class="{open : navCtrl.isDdOpen(1)}" ng-click="navCtrl.toggleDd(1)">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 				<ul class="dropdown-menu">
 				  <li><a href="#">Action</a></li>
@@ -48,7 +48,7 @@
 			</form>
 			<ul class="nav navbar-nav navbar-right">
 			  <li><a href="#">Link</a></li>
-			  <li class="dropdown" ng-class="{open : navCtrl.dropDown2}" ng-click="navCtrl.dropDown2 = !navCtrl.dropDown2">
+			  <li class="dropdown" ng-class="{open : navCtrl.isDdOpen(2)}" ng-click="navCtrl.toggleDd(2)">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown2 <span class="caret"></span></a>
 				<ul class="dropdown-menu">
 				  <li><a href="#">Action</a></li>
