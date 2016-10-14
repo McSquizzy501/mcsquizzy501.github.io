@@ -3,7 +3,7 @@
   
 	app.controller('riftGenerationController',function(){
 		//this.results = result;
-		this.text = myText;
+		this.results = myText;
 		this.generateResults = function(numResults){};
 		this.generateResult = function(){};	
 	});
