@@ -14,6 +14,6 @@
     
   });
   
-  var result = $.parseJSON('{8: "random", 1: "periodic", 12: "permanent"}');
+  var result = $.parseJSON('{a : "x", b : "y", c : "z"}');
   
 })();
