@@ -19,7 +19,7 @@
 				});
 			});
 
-            $scope.apply();
+            scope.$apply();
 		};
 	}]);
 
