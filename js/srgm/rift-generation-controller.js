@@ -18,6 +18,8 @@
                     console.log("Results = [" + self.results + "]");
 				});
 			});
+
+            $scope.apply();
 		};
 	});
 
