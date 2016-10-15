@@ -4,6 +4,7 @@
 	// Controllers
 	app.controller('riftGenerationController',function(){
 		//this.results = result;
+        var self = this;
 		this.results = [];
 		this.generateResults = function(numResults){};
 		this.generateResult = function(){};
@@ -12,7 +13,7 @@
 			$.get('/js/srgm/json/rift-category.json', function(data) {
 				console.log(data);
 				$.each(data, function(k, v){
-					results.push(k +' = ' + v + '<br>');
+					self.results.push(k +' = ' + v + '<br>');
 				});
 			});
 		};
