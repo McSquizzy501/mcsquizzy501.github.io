@@ -1,5 +1,8 @@
 <section ng-controller = "riftGenerationController as riftCtrl">
 	<h1>This is the Rift generation section</h1>
+	<form ng-submit="riftCtrl.submit()">
+		<input type = "submit" id="submit" value="Load" />
+	</form>
 	<div ng-repeat="result in riftCtrl.results">
 		{{result}}
 	</div>
