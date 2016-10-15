@@ -5,7 +5,7 @@
 	app.controller('riftGenerationController',function(){
 		//this.results = result;
         var self = this;
-        this.test = "TEST VALUE";
+        this.test = myText;
 		this.results = [];
 		this.generateResults = function(numResults){};
 		this.generateResult = function(){};
@@ -32,7 +32,7 @@
 
 	// Globals
 
-	//var myText = ['123 abc'];
+	var myText = "TEST VALUE";
 	
 
 
