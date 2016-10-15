@@ -5,6 +5,7 @@
 	app.controller('riftGenerationController',function(){
 		//this.results = result;
         var self = this;
+        this.test = "TEST VALUE";
 		this.results = [];
 		this.generateResults = function(numResults){};
 		this.generateResult = function(){};
@@ -13,8 +14,8 @@
 			$.get('/js/srgm/json/rift-category.json', function(data) {
 				console.log(data);
 				$.each(data, function(k, v){
-					self.results.push(k +' = ' + v + '<br>');
-                    console.log("Results = " + self.results);
+					self.results.push(k +' = ' + v);
+                    console.log("Results = [" + self.results + "]");
 				});
 			});
 		};
