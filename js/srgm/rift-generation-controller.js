@@ -14,6 +14,7 @@
 				console.log(data);
 				$.each(data, function(k, v){
 					self.results.push(k +' = ' + v + '<br>');
+                    console.log("Results = " + self.results);
 				});
 			});
 		};
