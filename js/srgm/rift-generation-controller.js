@@ -9,7 +9,7 @@
 		this.generateResult = function(){};
 		this.submit = function(){
 			console.log("Loading");
-			$.get('json/rift-category.json', function(data) {
+			$.get('./json/rift-category.json', function(data) {
 				console.log(data);
 				$.each(data, function(k, v){
 					results.push(k +' = ' + v + '<br>');
