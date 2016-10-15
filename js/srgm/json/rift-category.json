@@ -1,5 +1,5 @@
 {
-	8: "random",
-	11: "periodic",
-	12: "permanent"
+	"A" : "x",
+	"B" : "y",
+	"C" : "z"
 }
