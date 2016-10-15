@@ -2,7 +2,7 @@
   var app = angular.module('rift-generation-controller',[]);
 
 	// Controllers
-	app.controller('riftGenerationController',function(){
+	app.controller('riftGenerationController',['$scope', function($scope){
 		//this.results = result;
         var self = this;
         this.test = myText;
@@ -21,7 +21,7 @@
 
             $scope.apply();
 		};
-	});
+	}]);
 
 	// Directives
 	app.directive("riftGeneration", function() {
