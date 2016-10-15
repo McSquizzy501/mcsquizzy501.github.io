@@ -13,8 +13,8 @@
 	app.directive("riftGeneration", function() {
 		return {
 			restrict: 'E',
-			template: "<h1>rift generation</h1>"
-			//templateUrl: "../../html/rift-generation.html"
+			//template: "<h1>rift generation</h1>"
+			templateUrl: "../../html/rift-generation.html"
 		};
 	});
 
