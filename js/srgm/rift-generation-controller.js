@@ -7,7 +7,7 @@
 		this.results = [];
 		this.generateResults = function(numResults){};
 		this.generateResult = function(){};
-		this.load = function(){
+		this.submit = function(){
 			$.get('/js/srgm/json/rift-category.json', function(data) {
 				alert(data);
 				$.each(data, function(k, v){
