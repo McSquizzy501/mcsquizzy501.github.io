@@ -20,7 +20,7 @@
 
 	// Globals
 
-	var myText = [];
+	var myText = ['123 abc'];
 	
 	$.get('/js/srgm/json/rift-category.json', function(data) {
 		alert(data);
