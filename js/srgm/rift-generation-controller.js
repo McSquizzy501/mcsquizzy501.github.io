@@ -2,7 +2,7 @@
   var app = angular.module('rift-generation-controller',[]);
 
 	// Controllers
-	app.controller('riftGenerationController',['$scope', function($scope){
+	app.controller('riftGenerationController',['$http', function($http){
 		//this.results = result;
         var self = this;
         this.test = myText;
@@ -11,7 +11,7 @@
 		this.generateResult = function(){};
 		this.submit = function(){
 			console.log("Loading");
-			$.get('/js/srgm/json/rift-category.json', function(data) {
+			$http.get('/js/srgm/json/rift-category.json').then(function (){
 				console.log(data);
 				$.each(data, function(k, v){
 					self.results.push(k +' = ' + v);
