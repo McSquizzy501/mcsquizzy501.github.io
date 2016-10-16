@@ -11,9 +11,8 @@
 		this.generateResult = function(){};
 		this.submit = function(){
 			console.log("Loading");
-			$http.get('/js/srgm/json/rift-category.json').then(function (){
-				console.log(data);
-				$.each(data, function(k, v){
+			$http.get('/js/srgm/json/rift-category.json').then(function (res){
+				$.each(res, function(k, v){
 					self.results.push(k +' = ' + v);
                     console.log("Results = [" + self.results + "]");
 				});
