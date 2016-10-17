@@ -61,7 +61,7 @@
 					"7":"[1d4] hours",
 					"8":"[2d12] hours",
 				}
-			}
+			},
 	"switch rate": 
 			{
 				"dice":12,
@@ -80,7 +80,7 @@
 					"11":"Every 24 hours",
 					"12":"Never"
 				}
-			}
+			},
 	"deviation": 
 			{
 				"dice":8,
