@@ -1,6 +1,9 @@
 <section ng-controller = "riftGenerationController as riftCtrl">
-	<h1>This is the Rift generation section</h1>
 	<form ng-submit="riftCtrl.submit()">
+		<label>Number of results:
+			<input type"number" ng-model="riftCtrl.inputNumResults"
+				min="0" max="99" required>
+		</label>
 		<input type = "submit" id="submit" value="Load" />
 	</form>
     {{riftCtrl.test}}
