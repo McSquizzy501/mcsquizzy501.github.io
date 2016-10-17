@@ -1,5 +1,25 @@
 {
-	"13" : "x",
-	"19" : "y",
-	"20" : "z"
+	"category" :
+			{
+				"dice" : 12,
+				"table":
+				{ 
+					"8":"Random Rift", 
+					"11","Periodic Rift", 
+					"12": "Permanent Rift"
+				}
+			},
+	"type": {
+				"dice": 20,
+				"table": 
+				{
+					"14": "Dimensional",
+					"15":"Time",
+					"16":"Space/Time",
+					"17":"Ley Line",
+					"18":"Other Side",
+					"19":"Mythic",
+					"20":"Ethereal"
+				}
+			}
 }
