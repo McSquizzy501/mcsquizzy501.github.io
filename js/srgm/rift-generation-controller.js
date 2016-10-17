@@ -12,7 +12,7 @@
 		this.submit = function(){
 			console.log("Loading");
 			$http.get('/js/srgm/json/rift-category.json').then(function (res){
-				$.each(res, function(k, v){
+				$.each(res.data, function(k, v){
 					self.results.push(k +' = ' + v);
                     console.log("Results = [" + self.results + "]");
 				});
