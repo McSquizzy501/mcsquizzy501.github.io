@@ -5,6 +5,7 @@
 	app.controller('riftGenerationController',['$http', function($http){
 		//this.results = result;
         var self = this;
+	this.inputNumResults = 10;
         this.test = myText;
 		this.results = [];
 		this.generateResults = function(numResults){};
