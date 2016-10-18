@@ -31,7 +31,7 @@
 			console.log(response);
 			for(var key in Object.keys(response))
 			{
-				console.log(key + ": " + data[response]);
+				console.log(key + ": " + response[key]);
 			}
 		});
 		
