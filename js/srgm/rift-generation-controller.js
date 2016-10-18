@@ -8,10 +8,14 @@
 		
 		$http.get('/js/srgm/json/rift-tables.json').then(function (res){
 			self.tables = res;
+		}, function (res){
+			console.log("Failed to load tables");
 		});
 			
 		$http.get('/js/srgm/json/rift-init-tables.json').then(function (res){
-			self.tables = res;
+			self.initial_tables = res;
+		}, function (res){
+			console.log("Failed to load initial tables");
 		});
 		
 		this.inputNumResults = 10;
