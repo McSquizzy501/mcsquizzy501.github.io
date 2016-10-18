@@ -46,9 +46,10 @@
 		});
 		
 		this.generateResults = function(numResults){			
-			
+			console.log("Generating "+ numResults + " results");
 			for(var i = 0; i < this.inputNumResults; i++)
 			{
+				console.log("Generating");
 				this.generateResult();
 			}
 			
@@ -56,6 +57,8 @@
 		
 		
 		this.generateResult = function(){
+			var len = this.initial_tables.length;
+			console.log("There are " + len + " initial tables;")
 			for(var i = 0; i < this.initial_tables.length; i++)
 			{
 				var key = this.initial_tables[i];
