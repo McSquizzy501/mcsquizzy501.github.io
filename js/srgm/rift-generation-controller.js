@@ -13,37 +13,34 @@
 		this.tables = {};
 		this.initial_tables = [];
 		
-		this.loadJson = function(){
+	
+		this.loadJson = function(url, callback){
+			
+			$http.get(url).then(
+				function (res){
+					callback(res.data);
+					console.log("Succesfully loaded " + url);
+				}, 
+				function (res){
+					console.log("Failed to load " + url);
+				}
+			);			
+		};
+		
+		this.loadJson('/js/srgm/json/rift-init-tables.json', function(data){
+			console.log("loadJson " + data);
+		});
+		
+		this.loadJson('/js/srgm/json/rift-tables.json', function(data){
+			console.log("loadJson " + data);
+		});
+		
+		this.generateResults = function(numResults){			
+			
 			
 		};
 		
-		this.generateResults = function(numResults){
-			
-			
-			
-			$http.get('/js/srgm/json/rift-init-tables.json').then(function (res){
-				self.initial_tables = res.data["tables"];
-				console.log("Succesfully loaded initial tables: " + self.initial_tables);
-				
-				$http.get('/js/srgm/json/rift-tables.json').then(function (res){
-					self.tables = res.data;				
-					console.log("Succesfully loaded tables: " + self.tables);
-					
-					console.log("Generating " + numResults + " results");
-					for( var i = 0; i < numResults; i++)
-					{
-						console.log("generating");
-						this.generateResult();
-					}
-					
-				}, function (res){
-						console.log("Failed to load tables");
-				});			
-				
-				}, function (res){
-					console.log("Failed to load initial tables");
-			});
-		};
+		
 		this.generateResult = function(){
 			for(var i = 0; i < this.initial_tables.length; i++)
 			{
