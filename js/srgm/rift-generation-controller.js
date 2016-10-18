@@ -5,22 +5,71 @@
 	app.controller('riftGenerationController',['$http', function($http){
 		//this.results = result;
         var self = this;
-	this.inputNumResults = 10;
+		
+		$http.get('/js/srgm/json/rift-tables.json').then(function (res){
+			self.tables = res;
+		});
+			
+		$http.get('/js/srgm/json/rift-init-tables.json').then(function (res){
+			self.tables = res;
+		});
+		
+		this.inputNumResults = 10;
         this.test = myText;
 		this.results = [];
-		this.generateResults = function(numResults){};
-		this.generateResult = function(){};
-		this.submit = function(){
-			console.log("Loading");
-			$http.get('/js/srgm/json/rift-category.json').then(function (res){
-				$.each(res.data, function(k, v){
-					self.results.push(k +' = ' + v);
-                    console.log("Results = [" + self.results + "]");
-				});
-			});
-
-            //$scope.$apply();
+		
+		this.tables = {};
+		this.initial_tables = [];
+		
+		this.generateResults = function(numResults){
+			for( int i = 0; i < numResults; i++)
+			{
+				this.generateResult(){};
+			}
 		};
+		this.generateResult = function(){
+			for(int i = 0; i < this.initial_tables.length; i++)
+			{
+				this.processTable(this.tables[initial_tables[i]]);
+			}
+		};
+		
+		this.submit = function(){
+			this.generateResults(this.inputNumResults);
+		};
+		
+		this.processTable = function(entry)
+		{
+			//Entry is an object with dice and table attributes
+			var obj = tables[entry]
+			var dieSide = obj["dice"];
+			var roll = Math.floor((Math.random() * dieSide) + 1);
+			var table = this.obj["table"];
+			var found = false;
+			var index = 0;
+			var key = "";
+			var keys = Object.keys(table);
+			
+			console.log(keys);
+			
+			/*while(!found)
+			{
+				key = Object.
+			}*/
+		};
+		
+		this.getMap(arry)
+		{
+			var map = new Map();
+			for(int i = 0; i < arry.length; i++)
+			{
+				var obj = arry[i];
+				map.set(Object.keys(obj)[0], obj[Object.keys(obj)[0]]);
+			}
+			return map;
+		}
+
+		
 	}]);
 
 	// Directives
@@ -36,8 +85,7 @@
 
 	var myText = "TEST VALUE";
 	
-
-
+	
 
 
 })();
