@@ -8,6 +8,10 @@
 		
 		$http.get('/js/srgm/json/rift-tables.json').then(function (res){
 			self.tables = res.data;
+			for( var k in Object.keys(res) )
+			{
+				console.log(k + ": " + v);
+			}
 			console.log("Succesfully loaded tables: " + self.tables);
 			for( var key in Object.keys(self.tables) )
 			{
