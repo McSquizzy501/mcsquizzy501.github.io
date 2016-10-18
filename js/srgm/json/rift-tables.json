@@ -38,59 +38,5 @@
 			"19":"Stable",
 			"20":"Transparent"
 		}
-	},
-	"size": 
-	{
-		"dice":6,
-		"table":
-		{
-			"3":"Small",
-			"5":"Medium",
-			"6":"Large"
-		}
-	},
-	"duration": 
-	{
-		"dice":8,
-		"table":
-		{
-			"1":"[5d6] seconds",
-			"3":"[2d6] minutes",
-			"5":"[3d10] minutes",
-			"6":"[1d4*20] minutes",
-			"7":"[1d4] hours",
-			"8":"[2d12] hours",
-		}
-	},
-	"switch rate": 
-	{
-		"dice":12,
-		"table":
-		{
-			"1":"Every three seconds",
-			"2":"Every 10 seconds",
-			"3":"Every 30 seconds",
-			"4":"Every minute",
-			"5":"Every five minutes",
-			"6":"Every 10 minutes",
-			"7":"Every 30 minutes",
-			"8":"Every hour",
-			"9":"Every 5 hours",
-			"10":"Every 12 hours",
-			"11":"Every 24 hours",
-			"12":"Never"
-		}
-	},
-	"deviation": 
-	{
-		"dice":8,
-		"table":
-		{
-			"1":["Rifts Earth", "rifts earth locations"],
-			"3":["Parallel Earth", "magic", "psionics", "other factors"],
-			"5":["Earthlike world", "magic", "psionics", "other factors"],
-			"7":["Alien but relatable world", "magic", "psionics", "other factors"],
-			"8":["Very alien world", "magic", "psionics", "other factors"]
-		}
 	}
 }
