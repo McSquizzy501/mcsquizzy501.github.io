@@ -47,6 +47,10 @@
 		
 		this.generateResults = function(numResults){			
 			
+			for(var i = 0; i < this.inputNumResults; i++)
+			{
+				this.generateResult();
+			}
 			
 		};
 		
@@ -54,7 +58,9 @@
 		this.generateResult = function(){
 			for(var i = 0; i < this.initial_tables.length; i++)
 			{
-				this.processTable(this.tables[this.initial_tables[i]]);
+				var key = this.initial_tables[i];
+				console.log("key = " + key);
+				this.processTable(this.tables[key]);
 			}
 		};
 		
