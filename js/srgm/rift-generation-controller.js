@@ -29,10 +29,18 @@
 		
 		this.loadJson('/js/srgm/json/rift-init-tables.json', function(data){
 			console.log("loadJson " + data);
+			for(var k in Object.keys(data))
+			{
+				console.log(key + ": " + data[key]);
+			}
 		});
 		
 		this.loadJson('/js/srgm/json/rift-tables.json', function(data){
 			console.log("loadJson " + data);
+			for(var k in Object.keys(data))
+			{
+				console.log(key + ": " + data[key]);
+			}
 		});
 		
 		this.generateResults = function(numResults){			
