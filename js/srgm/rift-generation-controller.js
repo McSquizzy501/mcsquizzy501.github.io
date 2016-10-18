@@ -60,6 +60,8 @@
 			{
 				var key = this.initial_tables[i];
 				console.log("key = " + key);
+				console.log(self.tables);
+				console.log(self.tables[key]);
 				this.processTable(self.tables[key]);
 			}
 		};
