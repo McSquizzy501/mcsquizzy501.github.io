@@ -1,10 +1,12 @@
 {
-  "cat":
-  {
-    "dice":2,
-    "table":
-    {
-      "8":"X"
-    }
-  }
+	"category" :
+	{
+		"dice" : 12,
+		"table":
+		{ 
+			"8":"Random Rift", 
+			"11":"Periodic Rift", 
+			"12":"Permanent Rift"
+		}
+	}
 }
