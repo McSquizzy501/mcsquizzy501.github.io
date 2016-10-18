@@ -24,7 +24,7 @@
 		this.generateResults = function(numResults){
 			for( var i = 0; i < numResults; i++)
 			{
-				this.generateResult(){};
+				this.generateResult();
 			}
 		};
 		this.generateResult = function(){
