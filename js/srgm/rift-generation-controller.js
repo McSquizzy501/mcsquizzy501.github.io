@@ -59,9 +59,9 @@
 			for(var i = 0; i < this.initial_tables.length; i++)
 			{
 				var key = this.initial_tables[i];
-				console.log("key = " + key);
-				console.log(self.tables);
-				console.log(self.tables[key]);
+				// console.log("key = " + key);
+				// console.log(self.tables);
+				// console.log(self.tables[key]);
 				this.processTable(self.tables[key]);
 			}
 		};
@@ -80,14 +80,25 @@
 			var found = false;
 			var index = 0;
 			var key = "";
-			var keys = Object.keys(table);
+			var keys = Object.key(table);
+			var txt = "";
 			
 			console.log(keys);
 			
-			/*while(!found)
+			while(!found && index < keys.length)
 			{
-				key = Object.
-			}*/
+				key = keys[index];
+				if(roll >= key)
+				{
+					index++;
+				}
+				else
+				{
+					found = true;
+					txt = table[key];
+				}
+			}
+			console.log(txt);
 		};
 		
 		// this.getMap(arry)
