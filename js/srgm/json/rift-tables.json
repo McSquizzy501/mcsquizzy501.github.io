@@ -1,3 +1,7 @@
 {
-  "test":"no test"
+  "test":"no test",
+  "subobj":
+  {
+    "key":"value"
+  }
 }
