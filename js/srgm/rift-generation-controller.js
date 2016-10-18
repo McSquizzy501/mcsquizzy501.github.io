@@ -39,10 +39,13 @@
 		});
 		
 		this.loadJson('/js/srgm/json/rift-tables.json', function(data){
-			console.log("loadJson " + data);
-			for(var key in Object.keys(data))
+			console.log(response);
+			console.log(JSON.stringify(response));
+			console.log(Object.keys(response));
+			console.log(response["data"]);
+			for(var key in Object.keys(response))
 			{
-				console.log(key + ": " + data[key]);
+				console.log(key + ": " + response[key]);
 			}
 		});
 		
