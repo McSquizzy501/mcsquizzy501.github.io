@@ -6,7 +6,7 @@
 		//this.results = result;
         var self = this;
 		
-		this.inputNumResults = 10;
+		this.inputNumResults = 1;
         	this.test = myText;
 		this.results = [];		
 	
@@ -80,7 +80,7 @@
 			var found = false;
 			var index = 0;
 			var key = "";
-			var keys = Object.key(table);
+			var keys = Object.keys(table);
 			var txt = "";
 			
 			console.log(keys);
