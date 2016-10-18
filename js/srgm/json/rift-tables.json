@@ -1,7 +1,7 @@
 {
   "cat":
   {
-    "dice":2
+    "dice":2,
     "table":
     {
       "8":"X"
