@@ -38,5 +38,15 @@
 			"19":"Stable",
 			"20":"Transparent"
 		}
+	},
+	"size": 
+	{
+		"dice":6,
+		"table":
+		{
+			"3":"Small",
+			"5":"Medium",
+			"6":"Large"
+		}
 	}
 }
