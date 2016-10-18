@@ -15,6 +15,11 @@
 			
 		$http.get('/js/srgm/json/rift-init-tables.json').then(function (res){
 			self.initial_tables = res["tables"];
+			console.log("res = {");
+			for(var key in res){
+				console.log(key + ": " + res[key]);
+			}
+			console.log("}");
 			console.log("Succesfully loaded initial tables: " + self.initial_tables);
 		}, function (res){
 			console.log("Failed to load initial tables");
