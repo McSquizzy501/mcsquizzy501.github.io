@@ -58,16 +58,16 @@
 			}*/
 		};
 		
-		this.getMap(arry)
-		{
-			var map = new Map();
-			for(int i = 0; i < arry.length; i++)
-			{
-				var obj = arry[i];
-				map.set(Object.keys(obj)[0], obj[Object.keys(obj)[0]]);
-			}
-			return map;
-		}
+		// this.getMap(arry)
+		// {
+			// var map = new Map();
+			// for(int i = 0; i < arry.length; i++)
+			// {
+				// var obj = arry[i];
+				// map.set(Object.keys(obj)[0], obj[Object.keys(obj)[0]]);
+			// }
+			// return map;
+		// }
 
 		
 	}]);
