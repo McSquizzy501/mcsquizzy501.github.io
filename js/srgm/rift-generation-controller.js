@@ -29,24 +29,20 @@
 		
 		this.loadJson('/js/srgm/json/rift-init-tables.json', function(response){
 			console.log(response);
-			console.log(JSON.stringify(response));
-			console.log(Object.keys(response));
-			console.log(response["data"]);
-			for(var key in Object.keys(response))
-			{
-				console.log(key + ": " + response[key]);
-			}
+			console.log(response["data"]);			
+			this.initial_tables = response["data"]["tables"];
+			
+			console.log(this.initial_tables);
+			
 		});
 		
 		this.loadJson('/js/srgm/json/rift-tables.json', function(response){
 			console.log(response);
-			console.log(JSON.stringify(response));
-			console.log(Object.keys(response));
-			console.log(response["data"]);
-			for(var key in Object.keys(response))
-			{
-				console.log(key + ": " + response[key]);
-			}
+			console.log(response["data"]);			
+			this.tables = response["data"];
+			
+			console.log(this.tables);
+			
 		});
 		
 		this.generateResults = function(numResults){			
