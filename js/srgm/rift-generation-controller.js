@@ -18,7 +18,7 @@
 			
 			$http.get(url).then(
 				function (response){
-					callback(config, data, headers, status, statusText);
+					callback(response);
 					console.log("Succesfully loaded " + url);
 				}, 
 				function (res){
