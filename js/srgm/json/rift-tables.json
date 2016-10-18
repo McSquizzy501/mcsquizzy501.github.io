@@ -1,7 +1,10 @@
 {
-  "test":"no test",
-  "subobj":
+  "cat":
   {
-    "key":"value"
+    "dice":2
+    "table":
+    {
+      "8":"X"
+    }
   }
 }
