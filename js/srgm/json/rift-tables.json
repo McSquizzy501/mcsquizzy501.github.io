@@ -6,7 +6,7 @@
 				{ 
 					"8":"Random Rift", 
 					"11":"Periodic Rift", 
-					"12": "Permanent Rift"
+					"12":"Permanent Rift"
 				}
 			},
 	"type": 
@@ -14,7 +14,7 @@
 				"dice": 20,
 				"table": 
 				{
-					"14":["Dimensional", "deviation"],
+					"14":['Dimensional', 'deviation'],
 					"15":["Time", "era"],
 					"16":["Space/Time", "era", "deviation"],
 					"17":"Ley Line",
