@@ -60,7 +60,7 @@
 			{
 				var key = this.initial_tables[i];
 				console.log("key = " + key);
-				this.processTable(this.tables[key]);
+				this.processTable(self.tables[key]);
 			}
 		};
 		
