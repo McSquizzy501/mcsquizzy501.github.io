@@ -37,7 +37,7 @@
 		this.generateResult = function(){
 			for(var i = 0; i < this.initial_tables.length; i++)
 			{
-				this.processTable(this.tables[initial_tables[i]]);
+				this.processTable(this.tables[this.initial_tables[i]]);
 			}
 		};
 		
