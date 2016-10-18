@@ -7,19 +7,14 @@
         var self = this;
 		
 		$http.get('/js/srgm/json/rift-tables.json').then(function (res){
-			self.tables = res;
+			self.tables = res.data;
 			console.log("Succesfully loaded tables: " + self.tables);
 		}, function (res){
 			console.log("Failed to load tables");
 		});
 			
 		$http.get('/js/srgm/json/rift-init-tables.json').then(function (res){
-			self.initial_tables = res["tables"];
-			console.log("res = {");
-			for(var key in res){
-				console.log(key + ": " + res[key]);
-			}
-			console.log("}");
+			self.initial_tables = res.data["tables"];
 			console.log("Succesfully loaded initial tables: " + self.initial_tables);
 		}, function (res){
 			console.log("Failed to load initial tables");
