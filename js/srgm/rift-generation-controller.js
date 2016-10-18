@@ -17,8 +17,8 @@
 		this.loadJson = function(url, callback){
 			
 			$http.get(url).then(
-				function (res){
-					callback(res.data);
+				function (config, data, headers, status, statusText){
+					callback(config, data, headers, status, statusText);
 					console.log("Succesfully loaded " + url);
 				}, 
 				function (res){
@@ -27,12 +27,12 @@
 			);			
 		};
 		
-		this.loadJson('/js/srgm/json/rift-init-tables.json', function(data){
-			console.log("loadJson " + data);
-			for(var key in Object.keys(data))
-			{
-				console.log(key + ": " + data[key]);
-			}
+		this.loadJson('/js/srgm/json/rift-init-tables.json', function(config, data, headers, status, statusText){
+			console.log(config);
+			console.log(data);
+			console.log(headers);
+			console.log(status);
+			console.log(statusText);
 		});
 		
 		this.loadJson('/js/srgm/json/rift-tables.json', function(data){
