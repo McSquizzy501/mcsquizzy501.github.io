@@ -48,5 +48,18 @@
 			"5":"Medium",
 			"6":"Large"
 		}
+	},
+	"duration": 
+	{
+		"dice":8,
+		"table":
+		{
+			"1":"[5d6] seconds",
+			"3":"[2d6] minutes",
+			"5":"[3d10] minutes",
+			"6":"[1d4*20] minutes",
+			"7":"[1d4] hours",
+			"8":"[2d12] hours",
+		}
 	}
 }
