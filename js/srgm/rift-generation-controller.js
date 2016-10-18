@@ -8,11 +8,7 @@
 		
 		this.inputNumResults = 10;
         	this.test = myText;
-		this.results = [];
-		
-		this.tables = {};
-		this.initial_tables = [];
-		
+		this.results = [];		
 	
 		this.loadJson = function(url, callback){
 			
@@ -57,6 +53,7 @@
 		
 		
 		this.generateResult = function(){
+			console.log(this.initial_tables);
 			var len = this.initial_tables.length;
 			console.log("There are " + len + " initial tables;")
 			for(var i = 0; i < this.initial_tables.length; i++)
