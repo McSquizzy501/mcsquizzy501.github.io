@@ -29,6 +29,7 @@
 		
 		this.loadJson('/js/srgm/json/rift-init-tables.json', function(response){
 			console.log(response);
+			response = JSON.parse(JSON.stringify(response));
 			for(var key in Object.keys(response))
 			{
 				console.log(key + ": " + response[key]);
