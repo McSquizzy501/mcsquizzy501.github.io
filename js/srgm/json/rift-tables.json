@@ -1,12 +1,1 @@
-{
-	"category" :
-	{
-		"dice" : 12,
-		"table":
-		{ 
-			"8":"Random Rift", 
-			"11":"Periodic Rift", 
-			"12":"Permanent Rift"
-		}
-	},
-}
+{"test":"no test"}
