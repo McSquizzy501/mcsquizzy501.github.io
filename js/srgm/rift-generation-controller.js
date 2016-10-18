@@ -26,18 +26,18 @@
 		this.loadJson('/js/srgm/json/rift-init-tables.json', function(response){
 			console.log(response);
 			console.log(response["data"]);			
-			this.initial_tables = response["data"]["tables"];
+			self.initial_tables = response["data"]["tables"];
 			
-			console.log(this.initial_tables);
+			console.log(self.initial_tables);
 			
 		});
 		
 		this.loadJson('/js/srgm/json/rift-tables.json', function(response){
 			console.log(response);
 			console.log(response["data"]);			
-			this.tables = response["data"];
+			self.tables = response["data"];
 			
-			console.log(this.tables);
+			console.log(self.tables);
 			
 		});
 		
@@ -53,8 +53,8 @@
 		
 		
 		this.generateResult = function(){
-			console.log(this.initial_tables);
-			var len = this.initial_tables.length;
+			console.log(self.initial_tables);
+			//var len = self.initial_tables.length;
 			console.log("There are " + len + " initial tables;")
 			for(var i = 0; i < this.initial_tables.length; i++)
 			{
