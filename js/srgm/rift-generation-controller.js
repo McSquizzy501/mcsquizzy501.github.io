@@ -22,13 +22,13 @@
 		this.initial_tables = [];
 		
 		this.generateResults = function(numResults){
-			for( int i = 0; i < numResults; i++)
+			for( var i = 0; i < numResults; i++)
 			{
 				this.generateResult(){};
 			}
 		};
 		this.generateResult = function(){
-			for(int i = 0; i < this.initial_tables.length; i++)
+			for(var i = 0; i < this.initial_tables.length; i++)
 			{
 				this.processTable(this.tables[initial_tables[i]]);
 			}
