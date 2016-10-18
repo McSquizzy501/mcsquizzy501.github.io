@@ -41,10 +41,10 @@
 		this.processTable = function(entry)
 		{
 			//Entry is an object with dice and table attributes
-			var obj = tables[entry]
-			var dieSide = obj["dice"];
+			//var obj = tables[entry]
+			var dieSide = entry["dice"];
 			var roll = Math.floor((Math.random() * dieSide) + 1);
-			var table = this.obj["table"];
+			var table = this.entry["table"];
 			var found = false;
 			var index = 0;
 			var key = "";
