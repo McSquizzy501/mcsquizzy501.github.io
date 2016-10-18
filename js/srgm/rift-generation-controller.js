@@ -31,7 +31,7 @@
 			console.log(response);
 			console.log(JSON.stringify(response));
 			console.log(Object.keys(response));
-			response = JSON.parse(JSON.stringify(response));
+			console.log(response["data"]);
 			for(var key in Object.keys(response))
 			{
 				console.log(key + ": " + response[key]);
