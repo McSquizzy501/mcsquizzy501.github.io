@@ -10,7 +10,7 @@
 			self.tables = res.data;
 			for( var k in Object.keys(res) )
 			{
-				console.log(k + ": " + v);
+				console.log(k + ": " + res[k]);
 			}
 			console.log("Succesfully loaded tables: " + self.tables);
 			for( var key in Object.keys(self.tables) )
