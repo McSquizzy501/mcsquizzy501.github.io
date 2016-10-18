@@ -76,7 +76,7 @@
 			//var obj = tables[entry]
 			var dieSide = entry["dice"];
 			var roll = Math.floor((Math.random() * dieSide) + 1);
-			var table = this.entry["table"];
+			var table = entry["table"];
 			var found = false;
 			var index = 0;
 			var key = "";
