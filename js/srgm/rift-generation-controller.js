@@ -54,7 +54,7 @@
 		
 		this.generateResult = function(){
 			console.log(self.initial_tables);
-			//var len = self.initial_tables.length;
+			var len = self.initial_tables.length;
 			console.log("There are " + len + " initial tables;")
 			for(var i = 0; i < this.initial_tables.length; i++)
 			{
