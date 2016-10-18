@@ -1,1 +1,3 @@
-["category","type", "condition", "size","duration","switch rate","deviation"]
+{
+  "tables": ["category","type", "condition", "size","duration","switch rate","deviation"]
+}
