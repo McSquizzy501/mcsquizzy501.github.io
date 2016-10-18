@@ -9,6 +9,10 @@
 		$http.get('/js/srgm/json/rift-tables.json').then(function (res){
 			self.tables = res.data;
 			console.log("Succesfully loaded tables: " + self.tables);
+			for( var key in Object.keys(self.tables) )
+			{
+				console.log(key + ": " + self.tables[key]);
+			}
 		}, function (res){
 			console.log("Failed to load tables");
 		});
