@@ -12,7 +12,7 @@
     this.replaceInString = function(dieSpec){
       var match = /[\w\s]*\[(\d+)?d(\d+)([*/]\d+)?([+-]\d+)?\][\w\s]*$/.exec(dieSpec);
       if (!match) {
-        throw "Invalid dice notation: " + dieSpec;
+        return dieSpec;
       }
 
       var howMany = (typeof match[1] == 'undefined') ? 1 : parseInt(match[1]);
