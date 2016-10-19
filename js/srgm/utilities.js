@@ -44,5 +44,7 @@
 			// sum = eval(str);
 		// }
 		
+		return diceService;
+		
 	});
 })();
