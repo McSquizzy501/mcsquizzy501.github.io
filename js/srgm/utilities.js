@@ -39,7 +39,7 @@
 				str = str+modifiers[i];
 			}
 			
-			sum = eval(str);
+			return eval(str);
 		}
 		
 	});
