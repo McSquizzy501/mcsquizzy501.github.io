@@ -3,6 +3,13 @@
 	
 	app.service('diceService', function(){
 		
+		this.version = '0.0.1';
+		
+		this.soundOff = function()
+		{
+			console.log("[diceService] "+this.version);
+		}
+		
 		this.replaceInString = function(string){
 			var match = /\[(\d+)?d(\d+)([*/]\d+)*([+-]\d+)*?\]$/.exec(dieSpec);
 			if (!match) {
