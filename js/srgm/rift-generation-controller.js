@@ -6,7 +6,7 @@
 		//this.results = result;
         	var self = this;
 		diceService.soundOff();
-		console.log(diceService.replaceInString("There are [1d6] items");
+		console.log(diceService.replaceInString("There are [1d6] items"));
 		this.inputNumResults = 1;
         	this.test = myText;
 		this.rifts = [];		
