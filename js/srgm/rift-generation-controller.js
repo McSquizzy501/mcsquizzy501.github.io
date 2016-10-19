@@ -112,6 +112,8 @@
 						txt = res;
 					}
 					
+					console.log(key+" in rift? "+(key in rift));
+					
 					if( !(key in rift) )
 					{
 						rift[key] = txt;
