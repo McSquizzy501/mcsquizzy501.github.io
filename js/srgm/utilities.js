@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('utilities');
+	var app = angular.module('utilities',[]);
 	
 	app.service('diceService', function(){
 		
