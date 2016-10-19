@@ -1,7 +1,7 @@
 (function(){
 	var app = angular.module('utilities',[]);
 	
-	app.service('diceService', function(diceService){
+	app.service('diceService', function(){
     
     this.version = '0.0.1';
     
