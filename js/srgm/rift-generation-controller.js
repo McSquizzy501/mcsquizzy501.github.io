@@ -55,12 +55,12 @@
 		this.generateResult = function(){
 			// console.log(self.initial_tables);
 			var rift = {};
-			var len = self.initial_tables.length;
+			// var len = self.initial_tables.length;
 			// console.log("There are " + len + " initial tables;")
-			for(var i = 0; i < this.initial_tables.length; i++)
+			for(var i = 0; i < self.initial_tables.length; i++)
 			{
-				var key = this.initial_tables[i];
-				// console.log("key = " + key);
+				var key = self.initial_tables[i];
+				console.log("key = " + key);
 				// console.log(self.tables);
 				// console.log(self.tables[key]);
 				this.processTable(key, rift);
@@ -76,6 +76,7 @@
 		{
 			//Entry is an object with dice and table attributes
 			//var obj = tables[entry]
+			console.log("processTable["+key+"]");
 			var entry = self.tables[key];
 			var dieSide = entry["dice"];
 			var roll = Math.floor((Math.random() * dieSide) + 1);
