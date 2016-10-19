@@ -8,7 +8,7 @@
 		
 		this.inputNumResults = 1;
         	this.test = myText;
-		this.results = [];		
+		this.rifts = [];		
 	
 		this.loadJson = function(url, callback){
 			
@@ -43,23 +43,24 @@
 		
 		this.generateResults = function(numResults){			
 			console.log("Generating "+ numResults + " results");
+			
 			for(var i = 0; i < this.inputNumResults; i++)
 			{
 				console.log("Generating");
-				this.generateResult();
+				self.rifts.push(this.generateResult(i));
 			}
 			
 		};
 		
 		
-		this.generateResult = function(){
+		this.generateResult = function(id){
 			// console.log(self.initial_tables);
 			var rift = {};
+			rift["id"] = id;
 			// var len = self.initial_tables.length;
 			// console.log("There are " + len + " initial tables;")
 			for(var i = 0; i < self.initial_tables.length; i++)
-			{
-				rift["id"] = i;
+			{	
 				var key = self.initial_tables[i];
 				console.log("key = " + key);
 				// console.log(self.tables);
@@ -67,6 +68,8 @@
 				this.processTable(key, rift);
 				console.log(rift);
 			}
+			
+			return rift;
 		};
 		
 		this.submit = function(){
