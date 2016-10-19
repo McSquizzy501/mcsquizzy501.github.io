@@ -1,11 +1,11 @@
 (function(){
-  var app = angular.module('rift-generation-controller',[]);
+  var app = angular.module('rift-generation-controller',['utilities']);
 
 	// Controllers
-	app.controller('riftGenerationController',['$http', function($http){
+	app.controller('riftGenerationController',['$http', function($http, diceService){
 		//this.results = result;
-        var self = this;
-		
+        	var self = this;
+		diceService.soundOff();
 		this.inputNumResults = 1;
         	this.test = myText;
 		this.rifts = [];		
