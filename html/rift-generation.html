@@ -1,14 +1,13 @@
 <section ng-controller = "riftGenerationController as riftCtrl">
 	<form ng-submit="riftCtrl.submit()">
-		<label>Number of results:
+		<label>Number:
 			<input type="number" name="input" ng-model="riftCtrl.inputNumResults"
 				min="0" max="99" required
 				class="ng-valid ng-not-empty ng-valid-min ng-valid-max ng-valid-required ng-dirty ng-valid-number ng-touched">
 		</label>
 		<input type = "submit" id="submit" value="Load" />
 	</form>
-    {{riftCtrl.test}}
-	<div ng-repeat="result in riftCtrl.results">
-		{{result}}
+	<div ng-repeat="rift in riftCtrl.rifts">
+		{{rift}}
 	</div>
 </section>
