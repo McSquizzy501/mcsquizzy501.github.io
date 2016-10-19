@@ -10,7 +10,7 @@
     };
     
     this.replaceInString = function(dieSpec){
-			var match = /\[(\d+)?d(\d+)([*/]\d+)*([+-]\d+)*?\]$/.exec(dieSpec);
+			var match = /[\w\s]*\[(\d+)?d(\d+)([*/]\d+)?([+-]\d+)?\][\w\s]*$/.exec(dieSpec);
 			if (!match) {
 				throw "Invalid dice notation: " + dieSpec;
 			}
