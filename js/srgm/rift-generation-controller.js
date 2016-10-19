@@ -112,7 +112,7 @@
 						txt = res;
 					}
 					
-					if( rift[key] != 'undefined' )
+					if( rift[key] == undefined )
 					{
 						rift[key] = txt;
 					}
