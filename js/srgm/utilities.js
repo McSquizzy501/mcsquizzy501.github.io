@@ -19,7 +19,7 @@
 			var dieSize = parseInt(match[2]);
 			var modifiers = [];
 			for(var i = 3; i < match.length; i++){
-				if(typeof match[i] != 'undefined'))
+				if(typeof match[i] != 'undefined')
 				{
 					modifiers.push(match[i]);
 				}
