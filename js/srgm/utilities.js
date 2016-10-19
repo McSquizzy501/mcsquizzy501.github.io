@@ -1,14 +1,12 @@
 (function(){
 	var app = angular.module('utilities',[]);
 	
-	app.factory('diceService', function(){
+	app.service('diceService', function(diceService){
     
-    var diceService = {};
+    this.version = '0.0.1';
     
-    diceService.version = '0.0.1';
-    
-    diceService.soundOff = function(){
-      console.log("[diceService] " + diceService.version);
+    this.soundOff = function(){
+      console.log("[diceService] " + this.version);
     };
     
     // this.replaceInString = function(string){
@@ -43,8 +41,8 @@
 			
 			// sum = eval(str);
 		// }
-		
-		return diceService;
+    
+    // return diceService;
 		
 	});
 })();
