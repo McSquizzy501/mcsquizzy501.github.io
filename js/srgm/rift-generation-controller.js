@@ -89,7 +89,7 @@
 			while(!found && index < keys.length)
 			{
 				key = keys[index];
-				if(roll >= key)
+				if(roll > key)
 				{
 					index++;
 				}
