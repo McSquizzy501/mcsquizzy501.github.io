@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('SRGM', ['utilities', 'main-tab-controller','navbar-controller', 'rift-generation-controller']);
+  var app = angular.module('SRGM', ['main-tab-controller','navbar-controller', 'rift-generation-controller']);
 
   /*app.controller('NavBarController', function() {
     this.navToggle = true;
