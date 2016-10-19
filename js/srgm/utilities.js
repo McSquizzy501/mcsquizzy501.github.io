@@ -1,7 +1,8 @@
 (function(){
 	var app = angular.module('utilities');
 	
-	app.service('diceService', function(
+	app.service('diceService', function(){
+		
 		this.replaceInString = function(string){
 			var match = /\[(\d+)?d(\d+)([*/]\d+)*([+-]\d+)*?\]$/.exec(dieSpec);
 			if (!match) {
@@ -34,6 +35,6 @@
 			
 			sum = eval(str);
 		}
-		this.parseDice = function(string){}
-	));
+	
+	});
 })();
