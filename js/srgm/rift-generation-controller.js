@@ -59,6 +59,7 @@
 			// console.log("There are " + len + " initial tables;")
 			for(var i = 0; i < self.initial_tables.length; i++)
 			{
+				rift["id"] = i;
 				var key = self.initial_tables[i];
 				console.log("key = " + key);
 				// console.log(self.tables);
@@ -83,7 +84,6 @@
 			var table = entry["table"];
 			var found = false;
 			var index = 0;
-			var key = "";
 			var keys = Object.keys(table);
 			var txt = "";
 			
@@ -92,7 +92,7 @@
 			
 			while(!found && index < keys.length)
 			{
-				key = keys[index];
+				var k = keys[index];
 				if(roll > key)
 				{
 					index++;
@@ -101,19 +101,39 @@
 				{
 					found = true;
 					var res = table[key];
+					var txt = "";
 					if(res.constructor == Array){
-						rift[key] = res[0];
+						txt = res[0];
 						for(var i = 1; i < res.length; i++)
 						{
 							this.processTable(res[i], rift);
 						}
 					} else {
-						rift[key] = res;
+						txt = res;
 					}
+					
+					if( rift[key] != 'undefined' )
+					{
+						rift[key] = txt;
+					}
+					else
+					{
+						if (rift[key].constructor == Array)
+						{
+							rift[key].push(txt);
+						}
+						else
+						{
+							var tmp = rift[key];
+							rift[key] = [];
+							rift[key].push(tmp);
+							rift[key].push(txt);
+						}
+					}
+					
 					console.log("Result["+key+"]: "+table[key]);
 				}
 			}
-			console.log(txt);
 		};
 		
 		// this.getMap(arry)
