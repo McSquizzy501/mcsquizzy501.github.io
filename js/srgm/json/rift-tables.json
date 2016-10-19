@@ -86,11 +86,82 @@
 		"dice":8,
 		"table":
 		{
-			"1":["Rifts Earth", "rifts earth locations"],
+			"1":["Rifts Earth", "rifts earth location"],
 			"3":["Parallel Earth", "magic", "psionics", "other factors"],
 			"5":["Earthlike world", "magic", "psionics", "other factors"],
 			"7":["Alien but relatable world", "magic", "psionics", "other factors"],
 			"8":["Very alien world", "magic", "psionics", "other factors"]
 		}
-	}
+	},
+	"rift earth location"
+	{
+		"dice":6,
+		"table":
+		{
+			"1":"A few miles away",
+			"2":"Dozens of miles away",
+			"3":"Hundreds of miles away",
+			"4":"Thousands of miles away",
+			"5":"Another continent",
+			"6":"Somewhere on an ocean"
+		}
+	},
+	"era"
+	{
+		"dice":12,
+		"table":
+		{
+			"1":"Prehistoric",
+			"2":"Stone Age",
+			"3":"Bronze/Iron Age",
+			"4":"Roman Empire",
+			"5":"Medieval Era",
+			"6":"Renaissance",
+			"7":"Early Industrial",
+			"8":"Machine/Atomic/Space Age",
+			"9":"Information/Digital Age",
+			"10":"Post-21st Centry War-Torn Dystopia",
+			"11":"Post-Human Development",
+			"12":"Interstellar Age"
+		}
+	},
+	"magic"
+	{
+		"dice":6,
+		"table":
+		{
+			"1":"Null magic",
+			"3":"Low magic",
+			"5":"Medium magic",
+			"4":"High magic"
+		}
+	},
+	"psionics"
+	{
+		"dice":6,
+		"table":
+		{
+			"1":"Null psionics",
+			"3":"Low psionics",
+			"5":"Medium psionics",
+			"4":"High psionics"
+		}
+	},
+	"other factors"
+	{
+		"dice":10
+		"table":
+		{
+			"1":"Apocalypse",
+			"2":"World war",
+			"3":"World peace",
+			"4":"Hostile environment",
+			"5":"Supernatural horror",
+			"6":"Superheroes",
+			"7":"Fiction-verse",
+			"8":"Gateways",
+			"9":"Dopplegangers",
+			"10":"Established setting",
+		}
+	},
 }
