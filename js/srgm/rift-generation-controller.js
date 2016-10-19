@@ -89,18 +89,19 @@
 			
 			console.log("Roll: " + roll);
 			console.log(keys);
+			console.log(table);
 			
 			while(!found && index < keys.length)
 			{
 				var k = keys[index];
-				if(roll > key)
+				if(roll > k)
 				{
 					index++;
 				}
 				else
 				{
 					found = true;
-					var res = table[key];
+					var res = table[k];
 					var txt = "";
 					if(res.constructor == Array){
 						txt = res[0];
