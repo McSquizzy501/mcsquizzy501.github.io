@@ -24,20 +24,20 @@
 		};
 		
 		this.loadJson('/js/srgm/json/rift-init-tables.json', function(response){
-			console.log(response);
-			console.log(response["data"]);			
+			// console.log(response);
+			// console.log(response["data"]);			
 			self.initial_tables = response["data"]["tables"];
 			
-			console.log(self.initial_tables);
+			// console.log(self.initial_tables);
 			
 		});
 		
 		this.loadJson('/js/srgm/json/rift-tables.json', function(response){
-			console.log(response);
-			console.log(response["data"]);			
+			// console.log(response);
+			// console.log(response["data"]);			
 			self.tables = response["data"];
 			
-			console.log(self.tables);
+			// console.log(self.tables);
 			
 		});
 		
@@ -53,9 +53,9 @@
 		
 		
 		this.generateResult = function(){
-			console.log(self.initial_tables);
+			// console.log(self.initial_tables);
 			var len = self.initial_tables.length;
-			console.log("There are " + len + " initial tables;")
+			// console.log("There are " + len + " initial tables;")
 			for(var i = 0; i < this.initial_tables.length; i++)
 			{
 				var key = this.initial_tables[i];
@@ -83,6 +83,7 @@
 			var keys = Object.keys(table);
 			var txt = "";
 			
+			console.log("Roll: " + roll);
 			console.log(keys);
 			
 			while(!found && index < keys.length)
@@ -96,6 +97,7 @@
 				{
 					found = true;
 					txt = table[key];
+					console.log("Result["+key+"]: "+table[key]);
 				}
 			}
 			console.log(txt);
