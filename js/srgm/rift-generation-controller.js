@@ -54,6 +54,7 @@
 		
 		this.generateResult = function(){
 			// console.log(self.initial_tables);
+			var rift = {};
 			var len = self.initial_tables.length;
 			// console.log("There are " + len + " initial tables;")
 			for(var i = 0; i < this.initial_tables.length; i++)
@@ -62,7 +63,8 @@
 				// console.log("key = " + key);
 				// console.log(self.tables);
 				// console.log(self.tables[key]);
-				this.processTable(self.tables[key]);
+				this.processTable(key, rift);
+				console.log(rift);
 			}
 		};
 		
@@ -70,10 +72,11 @@
 			this.generateResults(this.inputNumResults);
 		};
 		
-		this.processTable = function(entry)
+		this.processTable = function(key, rift)
 		{
 			//Entry is an object with dice and table attributes
 			//var obj = tables[entry]
+			var entry = self.tables[key];
 			var dieSide = entry["dice"];
 			var roll = Math.floor((Math.random() * dieSide) + 1);
 			var table = entry["table"];
@@ -96,7 +99,16 @@
 				else
 				{
 					found = true;
-					txt = table[key];
+					var res = table[key];
+					if(res.constructor == Array){
+						rift[key] = res[0];
+						for(var i = 1; i < res.length; i++)
+						{
+							this.processTable(res[i], rift);
+						}
+					} else {
+						rift[key] = res;
+					}
 					console.log("Result["+key+"]: "+table[key]);
 				}
 			}
