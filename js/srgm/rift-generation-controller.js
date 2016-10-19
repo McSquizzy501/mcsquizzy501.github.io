@@ -6,7 +6,12 @@
 		//this.results = result;
         	var self = this;
 		diceService.soundOff();
-		console.log(diceService.replaceInString("There are [1d6] items"));
+		console.log(diceService.replaceInString("base: [1d6]"));
+		console.log(diceService.replaceInString("addition: [1d6+1]"));
+		console.log(diceService.replaceInString("subtraction: [1d6-1]"));
+		console.log(diceService.replaceInString("multiplication: [1d6*1]"));
+		console.log(diceService.replaceInString("division: [1d6/1]"));
+		console.log(diceService.replaceInString("multadd: [1d6*2+1]"));
 		this.inputNumResults = 1;
         	this.test = myText;
 		this.rifts = [];		
