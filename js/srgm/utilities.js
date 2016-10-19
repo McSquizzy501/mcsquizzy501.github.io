@@ -34,7 +34,7 @@
 			
 			var str = ""+sum;
 			
-			for( var i = 0; i < modifers.length; i++)
+			for( var i = 0; i < modifiers.length; i++)
 			{
 				str = str+modifiers[i];
 			}
