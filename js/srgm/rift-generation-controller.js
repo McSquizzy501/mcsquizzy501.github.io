@@ -62,6 +62,7 @@
       // console.log(self.initial_tables);
       var rift = {};
       rift["id"] = id;
+      rift["other factors"] = [];
       // var len = self.initial_tables.length;
       // console.log("There are " + len + " initial tables;")
       for(var i = 0; i < self.initial_tables.length; i++)
