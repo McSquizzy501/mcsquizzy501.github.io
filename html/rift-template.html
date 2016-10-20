@@ -44,7 +44,7 @@
     <div class="col-xs-12">
       <!-- Other Factors -->
       Other Factors
-      <div class="row" ng-repeat="factor in rift['other factors']">
+      <div class="row" ng-repeat="factor in rift['other factors'] track by $index">
         <div class="col-xs-8 col-xs-offset-4">
           {{factor}}
         </div>
