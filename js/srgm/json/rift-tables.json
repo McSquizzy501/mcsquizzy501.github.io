@@ -133,7 +133,7 @@
       "1":"Null magic",
       "3":"Low magic",
       "5":"Medium magic",
-      "4":"High magic"
+      "6":"High magic"
     }
   },
   "psionics":
@@ -144,7 +144,7 @@
       "1":"Null psionics",
       "3":"Low psionics",
       "5":"Medium psionics",
-      "4":"High psionics"
+      "6":"High psionics"
     }
   },
   "other factors":
