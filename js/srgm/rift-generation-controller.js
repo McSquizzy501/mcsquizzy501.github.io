@@ -6,12 +6,6 @@
     //this.results = result;
     var self = this;
     diceService.soundOff();
-    console.log(diceService.replaceInString("base: [1d6]"));
-    console.log(diceService.replaceInString("addition: [1d6+1]"));
-    console.log(diceService.replaceInString("subtraction: [1d6-1]"));
-    console.log(diceService.replaceInString("multiplication: [1d6*1]"));
-    console.log(diceService.replaceInString("division: [1d6/1]"));
-    console.log(diceService.replaceInString("multadd: [1d6*2+1]"));
     this.inputNumResults = 10;
     this.rifts = [];    
   
@@ -52,7 +46,9 @@
       for(var i = 0; i < this.inputNumResults; i++)
       {
         console.log("Generating");
-        self.rifts.push(this.generateResult(i));
+        var rift = this.generateResult(i);
+        console.log(rift);
+        self.rifts.push(rift);
       }
       
     };
@@ -96,10 +92,9 @@
       var index = 0;
       var keys = Object.keys(table);
       var txt = "";
-      
-      console.log("Roll: " + roll);
       console.log(keys);
       console.log(table);
+      console.log("Roll: " + roll);
       
       while(!found && index < keys.length)
       {
