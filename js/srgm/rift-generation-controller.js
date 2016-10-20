@@ -170,6 +170,12 @@
       templateUrl: "../../html/rift-generation.html"
     };
   });
+  app.directive("riftTemplate", function(){
+    return {
+      restrict: 'E',
+      templateUrl: "../../html/rift-template.html"
+    };
+  });
 
   // Globals
 
