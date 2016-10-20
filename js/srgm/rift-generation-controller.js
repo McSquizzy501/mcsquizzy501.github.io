@@ -68,11 +68,11 @@
       for(var i = 0; i < self.initial_tables.length; i++)
       {  
         var key = self.initial_tables[i];
-        console.log("key = " + key);
+        //console.log("key = " + key);
         // console.log(self.tables);
         // console.log(self.tables[key]);
         this.processTable(key, rift);
-        console.log(rift);
+        //console.log(rift);
       }
       
       return rift;
@@ -123,7 +123,7 @@
             txt = res;
           }
           
-          console.log(key+" in rift? "+(key in rift));
+          //console.log(key+" in rift? "+(key in rift));
           
           if( !(key in rift) )
           {
@@ -144,7 +144,7 @@
             }
           }
           
-          console.log("Result["+key+"]: "+table[key]);
+          //console.log("Result["+key+"]: "+table[key]);
         }
       }
     };
