@@ -1,0 +1,3 @@
+{
+  "tables": ["category","type", "condition", "size","duration","switch rate"]
+}
