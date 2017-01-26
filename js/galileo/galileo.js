@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('Galileo', ['main-tab-controller', 'navbar-controller', 'rift-generation-controller']);
+  var app = angular.module('Galileo', ['main-tab-controller', 'navbar-controller', 'sector-generator-controller']);
 
   /*app.controller('NavBarController', function() {
     this.navToggle = true;
