@@ -2,7 +2,7 @@
   var app = angular.module('sector-generator-controller',['utilities']);
 
   // Controllers
-  app.controller('riftGenerationController',['$http', 'diceService', function($http, diceService){
+  app.controller('sectorGeneratorController',['$http', 'diceService', function($http, diceService){
     //this.results = result;
     var self = this;
     diceService.soundOff();
