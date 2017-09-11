@@ -27,7 +27,7 @@
     };
   });
   
-  app.directive('riftGeneration', function() {
+  app.directive('travelGeneration', function() {
     return {
       restrict: 'E',
       template: "<h1>This is the Rift Generation section</h1>"
