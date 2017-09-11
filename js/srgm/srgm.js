@@ -1,20 +1,10 @@
 (function() {
-  var app = angular.module('SRGM', ['main-tab-controller','navbar-controller', 'rift-generation-controller']);
+  var app = angular.module('SRGM', []);
 
-  /*app.controller('NavBarController', function() {
+  app.controller('NavBarController', function() {
     this.navToggle = true;
-    this.dropDown1 = true;
-    this.dropDown2 = true;
-    this.dropDowns = [false, false];
-    
-    this.isDdOpen = function(dd) {
-      return this.dropDowns[dd];
-    };
-    
-    this.toggleDd = function(dd) {
-      this.dropDowns[dd] = !this.dropDowns[dd];
-    };
-    
+    this.dropDown1 = false;
+    this.dropDown2 = false;
   });
 
   app.controller('TabController', function() {
@@ -28,6 +18,20 @@
       return this.tab == checkTab;
     };
 
-  });*/
+  });
+
+  app.directive('riftGeneration', function() {
+    return {
+      restrict: 'E',
+      template: "<h1>This is the Rift Generation section</h1>"
+    };
+  });
+  
+  app.directive('riftGeneration', function() {
+    return {
+      restrict: 'E',
+      template: "<h1>This is the Rift Generation section</h1>"
+    };
+  });
 
 })();

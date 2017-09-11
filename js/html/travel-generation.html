@@ -1,0 +1,23 @@
+<section ng-controller = "travelController as travelCtrl">
+  <form ng-submit="travelCtrl.submit()">
+    <label>Distance:
+      <input type="number" name="inputDistance" ng-model="travelCtrl.inputDistance"
+        min="0" max="9999" required
+        class="ng-valid ng-not-empty ng-valid-min ng-valid-max ng-valid-required ng-dirty ng-valid-number ng-touched">
+    </label>
+    <label>Top Speed:
+      <input type="number" name="inputTopSpeed" ng-model="travelCtrl.inputTopSpeed"
+        min="0" max="250" required
+        class="ng-valid ng-not-empty ng-valid-min ng-valid-max ng-valid-required ng-dirty ng-valid-number ng-touched">
+    </label>
+    <label>Travel Mode:
+      <select name="inputMode" 
+      ng-model="travelCtrl.inputMode"
+      ng-options = "option.name for option in travelCtrl.inputTravelModes track by option.id"></select>
+    </label>
+    <input type = "submit" id="submit" value="Generate" />
+  </form>
+  <div class = "well" ng-repeat="travel in travelCtrl.travels">
+    {{travel}}
+  </div>
+</section>

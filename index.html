@@ -11,7 +11,6 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-	<script src="/js/srgm/utilities.js"></script>
     <script src="/js/srgm/main-tab-controller.js"></script>
     <script src="/js/srgm/nav-controller.js"></script>
     <script src="/js/srgm/rift-generation-controller.js"></script>
@@ -88,29 +87,36 @@
 
     <section ng-controller="TabController as tabCtrl">
         <ul class="nav nav-pills nav-justified">
-            <li ng-class="{active : tabCtrl.isActive(1)}">
-                <a href ng-click="tabCtrl.setTab(1)">Rift Generator</a>
+            <li ng-class="{active: tabCtrl.isActive(1)}">
+              <a href ng-click="tabCtrl.setTab(1)">Testing</a>
             </li>
             <li ng-class="{active : tabCtrl.isActive(2)}">
-                <a href ng-click="tabCtrl.setTab(2)">Authority Figure</a>
+                <a href ng-click="tabCtrl.setTab(2)">Rift Generator</a>
             </li>
             <li ng-class="{active : tabCtrl.isActive(3)}">
-                <a href ng-click="tabCtrl.setTab(3)">Risks & Rewards</a>
+                <a href ng-click="tabCtrl.setTab(3)">Authority Figure</a>
+            </li>
+            <li ng-class="{active : tabCtrl.isActive(4)}">
+                <a href ng-click="tabCtrl.setTab(4)">Risks & Rewards</a>
             </li>
         </ul>
 
         <div class="tab-content">
             <div class="tab-pane"
                  ng-class="{active : tabCtrl.isActive(1)}">
-                <rift-generation></rift-generation>
+                <travel-calc></travel-calc>
             </div>
             <div class="tab-pane"
                  ng-class="{active : tabCtrl.isActive(2)}">
-                This is pane 2
+                <rift-generation></rift-generation>
             </div>
             <div class="tab-pane"
                  ng-class="{active : tabCtrl.isActive(3)}">
-                This is pane 3
+                WIP (3)
+            </div>
+            <div class="tab-pane"
+                 ng-class="{active : tabCtrl.isActive(4)}">
+                WIP (4)
             </div>
         </div>
 

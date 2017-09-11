@@ -1,12 +1,15 @@
 (function(){
-  var app = angular.module('rift-generation-controller',['utilities']);
+  var app = angular.module('travel-controller',['utilities']);
 
   // Controllers
-  app.controller('riftGenerationController',['$http', 'diceService', function($http, diceService){
+  app.controller('travelController',['$http', 'diceService', function($http, diceService){
     //this.results = result;
     var self = this;
     diceService.soundOff();
-    this.inputNumResults = 10;
+    this.inputDistance = 0;
+    this.inputTopSpeed = 0;
+    this.inputTravelModes = [{id: '1', name: 'Ground - Walk'}, {id: '2', name: 'Ground - Wheeled'}, {id: '3', name: 'Hover'}, {id: '4', name: 'Flight'}];
+    this.inputMode = '';
     this.rifts = [];    
   
     this.loadJson = function(url, callback){
